@@ -20,7 +20,7 @@ if is_production:
     # En producción: permite tu dominio de Render y otros que necesites
     origins = [
         RENDER_URL,  # Tu URL de Render
-        "https://tu-dominio-frontend.com",  # Si tienes frontend separado
+        "https://gestor-notas-api-1h1e.onrender.com",  # Si tienes frontend separado
     ]
     # Filtrar valores vacíos
     origins = [origin for origin in origins if origin]
