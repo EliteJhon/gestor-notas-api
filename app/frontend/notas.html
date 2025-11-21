@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <h2>Gestión de Notas</h2>
+
+    <a href="dashboard.html">Volver al Dashboard</a>
+    <br><br>
+
+    <h3>Crear Nota</h3>
+    <form id="crearNotaForm">
+        <label>Título:</label><br>
+        <input type="text" id="titulo" required><br><br>
+
+        <label>Contenido:</label><br>
+        <textarea id="contenido" required></textarea><br><br>
+
+        <button type="submit">Crear</button>
+    </form>
+
+    <h3>Notas Registradas</h3>
+
+    <table border="1" id="tablaNotas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Contenido</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</body>
+</html>

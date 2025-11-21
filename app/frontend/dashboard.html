@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Gestor de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Gestor de Notas</h2>
+
+        <nav>
+            <ul id="menuItems">
+                <li class="active" id="misNotasBtn">📒 Mis Notas</li>
+                <li id="crearNotaBtn">➕ Crear Nota</li>
+
+                <!-- Opciones solo para admin -->
+                <li class="admin-only" id="allNotesBtn">📚 Ver Todas las Notas</li>
+                <li class="admin-only" id="usersBtn">👥 Ver Usuarios</li>
+                <li class="admin-only" id="exportBtn">📤 Exportar Todas las Notas</li>
+            </ul>
+
+            <ul>
+                <li id="logoutBtn" class="logout">🚪 Cerrar Sesión</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="content">
+
+        <header class="page-header">
+            <h1 id="pageTitle">Mis Notas</h1>
+            <button id="newNoteBtn" class="btn-primary" style="display: none;">Nueva Nota</button>
+        </header>
+
+        <!-- SECCIÓN: Mis Notas -->
+        <section id="sectionMyNotes" class="content-section">
+            <div id="notesList" class="notes-grid"></div>
+        </section>
+
+        <!-- SECCIÓN: Todas las Notas (Admin) -->
+        <section id="sectionAllNotes" class="content-section" style="display: none;">
+            <div id="allNotesList" class="notes-grid"></div>
+        </section>
+
+        <!-- SECCIÓN: Usuarios (Admin) -->
+        <section id="sectionUsers" class="content-section" style="display: none;">
+            <div id="usersList" class="users-grid"></div>
+        </section>
+
+        <!-- SECCIÓN: Exportar (Admin) -->
+        <section id="sectionExport" class="content-section" style="display: none;">
+            <div class="export-info">
+                <p>Haz clic en el botón de exportar en el menú lateral para descargar las notas.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL PARA CREAR/EDITAR NOTA -->
+    <div id="modalCrear" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalTitle">Crear Nueva Nota</h2>
+
+            <label>Título</label>
+            <input type="text" id="noteTitle">
+
+            <label>Contenido</label>
+            <textarea id="noteContent"></textarea>
+
+            <label>Estado</label>
+            <select id="noteStatus">
+                <option value="pendiente">Pendiente</option>
+                <option value="en_progreso">En Progreso</option>
+                <option value="completado">Completado</option>
+            </select>
+
+            <label id="destinatarioLabel" style="display: none;">Asignar a:</label>
+            <select id="noteDestinatario" style="display: none;">
+                <option value="">Seleccionar usuario...</option>
+            </select>
+
+            <div class="modal-buttons">
+                <button id="saveNoteBtn" class="btn-primary">Crear</button>
+                <button id="closeModalBtn" class="btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script-dashboard.js"></script>
+</html>
