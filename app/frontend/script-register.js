@@ -1,6 +1,6 @@
 // app/frontend/script-register.js
 
-const apiURL = "https://gestor-notas-api.onrender.com/";
+const apiURL = "https://gestor-notas-api.onrender.com";
 
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
     e.preventDefault();

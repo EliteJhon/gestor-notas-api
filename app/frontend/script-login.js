@@ -1,4 +1,4 @@
-const apiURL = "https://gestor-notas-api.onrender.com/";
+const apiURL = "https://gestor-notas-api.onrender.com";
 
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();

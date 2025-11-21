@@ -1,6 +1,6 @@
 // app/frontend/script-dashboard.js
 
-const apiURL = "https://gestor-notas-api.onrender.com/";
+const apiURL = "https://gestor-notas-api.onrender.com";
 const token = localStorage.getItem("token");
 let user = null;
 let rol = null;
